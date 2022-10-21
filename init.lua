@@ -4,7 +4,7 @@ require "user.plugins"
 require "user.colorscheme"
 require "user.telescope"
 require "user.treesitter"
--- require "user.gitsigns"
+require "user.gitsigns"
 -- require "user.autopairs"
 require "user.comment"
 -- require "user.toggleterm" -- used with lazygit
