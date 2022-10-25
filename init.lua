@@ -7,7 +7,7 @@ require "user.treesitter"
 require "user.gitsigns"
 -- require "user.autopairs"
 require "user.comment"
--- require "user.toggleterm" -- used with lazygit
+require "user.toggleterm"
 require "user.lualine"
 require "user.nvim-tree"
 require "user.alpha"

@@ -93,15 +93,16 @@ local mappings = {
   g = {
     name = "Git",
     b = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+    d = {
+      "<cmd>Gitsigns diffthis HEAD<cr>",
+      "Diff",
+    },
+    f = { "<cmd>TermExec cmd='git fetch --all'<cr>", "Fetch All" },
     s = { "<cmd>Git<cr>:15wincmd_<cr>", "Status" },
     t = { name = "Telescope",
           o = {"<cmd>Telescope git_status<cr>", "Open changed file" },
           b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
           c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-    },
-    d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
-      "Diff",
     },
   },
    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
