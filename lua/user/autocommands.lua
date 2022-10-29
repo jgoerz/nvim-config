@@ -28,6 +28,11 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+
+  augroup _go
+    autocmd!
+    autocmd BufWritePre *.go lua _GO_ORG_IMPORTS(100)
+  augroup end
 ]]
 
 -- Autoformat

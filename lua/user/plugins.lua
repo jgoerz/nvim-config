@@ -78,7 +78,7 @@ return packer.startup(function(use)
 -- 	use("vimoutliner/vimoutliner")
 
   -- This commit is v1.26
-  use({"fatih/vim-go", commit = "e9d7ff3eb4a369f0cb2069c8f77ae68796bca308"})
+  -- use({"fatih/vim-go", commit = "e9d7ff3eb4a369f0cb2069c8f77ae68796bca308"})
   -- This commit is v3.7
   use({"tpope/vim-fugitive", commit = "96c1009fcf8ce60161cc938d149dd5a66d570756"})
 
