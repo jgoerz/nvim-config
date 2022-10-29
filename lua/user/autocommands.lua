@@ -31,6 +31,8 @@ vim.cmd [[
 
   augroup _go
     autocmd!
+    "  In newer versions of nvim it's format() instead of formatting_sync
+    autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()
     autocmd BufWritePre *.go lua _GO_ORG_IMPORTS(100)
   augroup end
 ]]

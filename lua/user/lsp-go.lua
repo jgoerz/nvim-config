@@ -18,6 +18,7 @@ require'lspconfig'.gopls.setup{
     },
 }
 
+-- Used in autocommands.lua
 function _GO_ORG_IMPORTS(wait_ms)
   local params = vim.lsp.util.make_range_params()
   params.context = {only = {"source.organizeImports"}}
