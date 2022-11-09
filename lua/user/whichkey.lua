@@ -94,11 +94,9 @@ local mappings = {
   g = {
     name = "Git",
     b = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-    d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
-      "Diff",
-    },
+    d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff"},
     f = { "<cmd>TermExec cmd='git fetch --all'<cr>", "Fetch All" },
+    r = { "<cmd>TermExec cmd='git rebase origin/master'<cr>", "Rebase" },
     s = { "<cmd>Git<cr>:15wincmd_<cr>", "Status" },
     t = { name = "Telescope",
           o = {"<cmd>Telescope git_status<cr>", "Open changed file" },
@@ -109,6 +107,11 @@ local mappings = {
    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
    ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
    ["q"] = { "<cmd>q!<CR>", "Quit" },
+   t = { 
+    name = "NvimTree",
+    a = {"<cmd>NvimTreeResize 80<cr>", "Expand"},
+    d = {"<cmd>NvimTreeResize 30<cr>", "Default"},
+   },
    ["w"] = { "<cmd>w!<CR>", "Save" },
 --   p = {
 --     name = "Packer",
