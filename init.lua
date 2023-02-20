@@ -10,8 +10,13 @@ require "user.comment"
 require "user.toggleterm"
 require "user.lualine"
 require "user.nvim-tree"
+
+-- Must come before installing any language servers
+-- :help nvim-lsp-installer-quickstart
+require("nvim-lsp-installer").setup {}
 require "user.lsp-go"
 require "user.lsp-elixir"
+require "user.lsp-java"
 require "user.alpha"
 require "user.autocommands"
 require "user.whichkey"
@@ -30,7 +35,10 @@ local options = {
 }
 vim.opt.shortmess:append "c"
 
-vim.opt.foldmethod = "expr"
+-- vim.opt.foldmethod = "expr"
+-- This seems to work best with go when you use generics.  gopls formats the
+-- code anyway, so this should be a very consistent experience
+vim.opt.foldmethod = "indent"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 for k, v in pairs(options) do
