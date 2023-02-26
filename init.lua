@@ -17,6 +17,7 @@ require("nvim-lsp-installer").setup {}
 require "user.lsp-go"
 require "user.lsp-elixir"
 require "user.lsp-java"
+require "user.lsp-ruby"
 require "user.alpha"
 require "user.autocommands"
 require "user.whichkey"
