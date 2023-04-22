@@ -1,3 +1,9 @@
+# Setup
+
+1. clone this repo into
+  - ubuntu: .config/nvim
+2. follow instructions in [packer README.md](site/pack/packer/start/README.md)
+
 # Goals
 
 - SCM workflow
