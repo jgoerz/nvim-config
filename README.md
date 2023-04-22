@@ -35,13 +35,12 @@
 # Investigate
 
 LSP "framework"
-- https://github.com/VonHeikemen/lsp-zero.nvim
-- once setup, run this: https://github.com/fatih/vim-go/wiki/Tutorial
+[X] https://github.com/VonHeikemen/lsp-zero.nvim
 
 Potential lua ideas to learn from
-- https://github.com/ray-x/nvim
+[ ] https://github.com/ray-x/nvim
 
 These two should hopefully address the workflows for test and some for coding
-- https://github.com/ThePrimeagen/refactoring.nvim
-- https://github.com/nvim-neotest/neotest
+[X] https://github.com/ThePrimeagen/refactoring.nvim
+[ ] https://github.com/nvim-neotest/neotest
 
