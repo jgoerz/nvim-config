@@ -95,4 +95,8 @@ return require('packer').startup(function(use)
 		{"hrsh7th/cmp-path"},
 	}
 
+	use {"vimoutliner/vimoutliner"}
+	use {"lewis6991/gitsigns.nvim"}
+
+
 end)
