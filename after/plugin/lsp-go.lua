@@ -1,9 +1,4 @@
---[[ require'lspconfig'.gopls.setup{} ]]
-
--- 
-lspconfig = require "lspconfig"
-util = require "lspconfig/util"
-
+local util = require "lspconfig/util"
 require'lspconfig'.gopls.setup{
 	cmd = {"gopls", "serve"},
 	filetypes = {"go", "gomod"},
