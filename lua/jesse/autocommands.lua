@@ -30,23 +30,26 @@ vim.cmd [[
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
 
+  " In newer versions of nvim it's format() instead of formatting_sync
   augroup _go
     autocmd!
-    " In newer versions of nvim it's format() instead of formatting_sync
     autocmd BufWritePre *.go lua vim.lsp.buf.format()
     autocmd BufWritePre *.go lua _GO_ORG_IMPORTS(100)
   augroup end
 
   augroup _ruby
     autocmd!
-    " In newer versions of nvim it's format() instead of formatting_sync
     autocmd BufWritePre *.rb lua vim.lsp.buf.format()
-    " autocmd BufWritePre *.rb lua _GO_ORG_IMPORTS(100) " can I do something similar with ruby?
   augroup end
 
   augroup _dart
     autocmd!
     autocmd BufWritePre *.dart lua vim.lsp.buf.format()
-    " autocmd BufWritePre *.dart lua _GO_ORG_IMPORTS(100) " can I do something similar with dart?
+  augroup end
+
+	" Vimoutliner needs to be updated
+  augroup _otl
+    autocmd!
+    autocmd BufEnter *.otl lua vim.api.nvim_win_set_option(0, "foldcolumn", "0")
   augroup end
 ]]

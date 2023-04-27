@@ -13,6 +13,7 @@ local options = {
 	swapfile = false,
 	number = true,
 	termguicolors = true,
+	foldcolumn = "0",
 	--[[ colorcolumn = "80", -- paints the column so you can wrap it manually ]]
 }
 vim.opt.shortmess:append "c"
