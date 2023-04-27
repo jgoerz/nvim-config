@@ -94,6 +94,7 @@ local kind_icons = {
 
 
 cmp.setup {
+	preselect = true,
 	mapping = {
 		["<C-p>"] = cmp.mapping.select_prev_item(),
 		["<C-n>"] = cmp.mapping.select_next_item(),
@@ -138,10 +139,10 @@ cmp.setup {
 		}),
 	},
 	sources = {
+		{ name = "luasnip" },
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 		{ name = "path" },
-		{ name = "luasnip" },
 		{ name = "nvim_lsp_signature_help" },
 	},
 	window = {
@@ -172,7 +173,7 @@ cmp.setup {
 
 -- You can also use lazy loading so you only get in memory snippets of languages you use
 require("luasnip.loaders.from_vscode").lazy_load() -- You can pass { path = "./my-snippets/"} as well
---[[ require("luasnip/loaders/from_vscode").load({ include = { "go" } }) -- Load only python snippets ]]
+--[[ require("luasnip/loaders/from_vscode").load({ include = { "go" } }) -- Load only go snippets ]]
 
 --[[ local cmp_select = {behavior = cmp.SelectBehavior.Select} ]]
 --[[]]
