@@ -83,16 +83,26 @@ return require('packer').startup(function(use)
 			{'williamboman/mason-lspconfig.nvim'}, -- Optional
 
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},     -- Required
+			{'hrsh7th/nvim-cmp', -- Required
+				dependencies = {
+					'cmp-nvim-lsp',
+					'cmp-buffer',
+					'cmp-path',
+					'cmp_luasnip',
+				},
+		  },
 			{'hrsh7th/cmp-nvim-lsp'}, -- Required
-			{'L3MON4D3/LuaSnip'},     -- Required
+			{'L3MON4D3/LuaSnip'}, -- Required
 		}
 	}
 
 	-- More Autocomplete
 	use {
+		{"saadparwaiz1/cmp_luasnip"},
 		{"hrsh7th/cmp-buffer"},
 		{"hrsh7th/cmp-path"},
+		{'rafamadriz/friendly-snippets'},
+		{'hrsh7th/cmp-nvim-lsp-signature-help'},
 	}
 
 	use {"vimoutliner/vimoutliner"}
