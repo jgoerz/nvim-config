@@ -31,3 +31,15 @@ vim.keymap.set('n', '<leader>g;', function()
 	end,
 	{desc = "toggle gitsigns"}
 )
+
+vim.keymap.set('n', '<leader>ad', function()
+		require('cmp').setup.buffer {enabled = false}
+	end,
+	{desc = "autocomplete disable"}
+)
+
+vim.keymap.set('n', '<leader>ae', function()
+		require('cmp').setup.buffer {enabled = true}
+	end,
+	{desc = "autocomplete disable"}
+)
