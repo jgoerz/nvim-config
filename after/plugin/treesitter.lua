@@ -14,6 +14,7 @@ require'nvim-treesitter.configs'.setup {
 		"gomod",
 		"gosum",
 		"gowork",
+		"hcl",
 		"html",
 		"ini",
 		"java",
