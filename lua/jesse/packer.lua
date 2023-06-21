@@ -119,5 +119,6 @@ return require('packer').startup(function(use)
 	-- for generating table of content links
 	use({ "mzlogin/vim-markdown-toc"})
 
+	use({"jamessan/vim-gnupg"})
 
 end)

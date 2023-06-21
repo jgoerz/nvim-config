@@ -1,0 +1,6 @@
+--[[ 1. Install gpg ]]
+--[[ 2. You most likely will need to generate a new key pair: ]]
+--[[ 	gpg --geneerate-key ]]
+--[[ 3. Make sure you use an email address that is easily remembered. ]]
+--[[ 	When encrypting docs to yourself, that email should be used as the recipient, ]]
+--[[ 	so the correct private key is used to encrypt.   ]]
