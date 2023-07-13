@@ -1,6 +1,13 @@
---[[]]
---[[ Keymaps not specific to a plugin ]]
---[[]]
+--
+-- Keymaps not specific to a plugin
+--
+
+-- label the group
+local wk = require("which-key")
+wk.register({
+	["<leader>g"] = { name = "git" }
+})
+
 vim.keymap.set('n', '<leader>h', function()
 		vim.cmd.nohlsearch()
 	end,
