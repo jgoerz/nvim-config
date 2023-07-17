@@ -121,4 +121,10 @@ return require('packer').startup(function(use)
 
 	use({"jamessan/vim-gnupg"})
 
+	-- Testing
+	--[[ use {"vim-test/vim-test"} ]]
+	--[[ use {"tpope/vim-dispatch"} ]]
+	--[[ use {"jgdavey/tslime.vim"} ]]
+
+
 end)
