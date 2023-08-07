@@ -1,3 +1,24 @@
+vim.cmd [[
+" Many thanks to Narizocracia over at Reddit.
+" https://www.reddit.com/r/neovim/comments/pz3wyc/is_there_any_good_way_to_edit_large_files/
+" disable syntax highlighting in big files
+function DisableSyntaxTreesitter()
+    echo("Big file, disabling syntax, treesitter and folding")
+    if exists(':TSBufDisable')
+        exec 'TSBufDisable autotag'
+        exec 'TSBufDisable highlight'
+        " etc...
+    endif
+
+    set foldmethod=manual
+    syntax clear
+    syntax off    " hmmm, which one to use?
+    filetype off
+    set noundofile
+    set noswapfile
+    set noloadplugins
+endfunction
+]]
 
 vim.cmd [[
   augroup _general_settings
@@ -62,5 +83,10 @@ vim.cmd [[
 	autocmd BufRead,BufNewFile *.tfstate,*.tfstate.backup set filetype=json
 	autocmd BufWritePre *.tfvars lua vim.lsp.buf.format()
 	autocmd BufWritePre *.tf lua vim.lsp.buf.format()
+
+	augroup BigFileDisable
+		autocmd!
+		autocmd BufReadPre,FileReadPre * if getfsize(expand("%")) > 512 * 1024 | exec DisableSyntaxTreesitter() | endif
+	augroup END
 
 ]]
