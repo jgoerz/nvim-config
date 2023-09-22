@@ -41,5 +41,5 @@ vim.keymap.set('n', '<leader>ad', function()
 vim.keymap.set('n', '<leader>ae', function()
 		require('cmp').setup.buffer {enabled = true}
 	end,
-	{desc = "autocomplete disable"}
+	{desc = "autocomplete enable"}
 )
