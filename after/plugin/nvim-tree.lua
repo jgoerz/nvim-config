@@ -23,7 +23,8 @@ vim.keymap.set('n', '<leader>ec', function()
 
 
 require('nvim-tree').setup {
-	highlight_focused_file = true,
+	-- this option not used anymore
+	-- highlight_focused_file = true,
 	update_focused_file = {
 		enable = true,
 		update_cwd = false,
