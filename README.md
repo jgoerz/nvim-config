@@ -2,7 +2,15 @@
 
 1. clone this repo into
   - ubuntu: .config/nvim
-2. follow instructions in [packer README.md](site/pack/packer/start/README.md)
+2. clone packer
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+3. nvim ~/.config/nvim/init.lua (Ignore all the errors)
+4. source ~/.config/nvim/lua/jesse/packer.lua
+5. :PackerSync
+6. :Mason (to install language servers)
 
 # Goals
 
