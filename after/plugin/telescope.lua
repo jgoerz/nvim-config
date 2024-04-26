@@ -4,6 +4,19 @@ wk.register({
 	["<leader>f"] = { name = "find stuff" }
 })
 
+require('telescope').setup {
+	pickers = {
+		live_grep = {
+			additional_args = function(opts)
+				return {
+					"--iglob=!vendor",
+					"--iglob=!tags",
+				}
+			end
+		}
+	}
+}
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "find files"})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = "live grep"})
