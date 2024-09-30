@@ -29,6 +29,10 @@ require('nvim-tree').setup {
 		enable = true,
 		update_cwd = false,
 		ignore_list = {},
-	}
+	},
+	git = {
+    enable = true,
+    timeout = 800 -- (in ms)
+  }
 }
 
