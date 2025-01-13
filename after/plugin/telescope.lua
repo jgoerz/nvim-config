@@ -1,7 +1,7 @@
 -- label the group
 local wk = require("which-key")
-wk.register({
-	["<leader>f"] = { name = "find stuff" }
+wk.add({
+	"<leader>f", group = "find stuff"
 })
 
 require('telescope').setup {

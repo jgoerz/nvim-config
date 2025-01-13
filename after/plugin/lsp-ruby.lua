@@ -26,9 +26,12 @@ local on_attach = function(client, bufnr)
 
 end
 
-require'lspconfig'.solargraph.setup{
+require'lspconfig'.solargraph.setup({
   on_attach = on_attach,
+	init_options = {
+		formatting = true
+	},
   flags = {
       debounce_text_changes = 150,
-  }
-}
+  },
+})

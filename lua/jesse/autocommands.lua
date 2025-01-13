@@ -64,11 +64,6 @@ vim.cmd [[
     autocmd BufEnter *.rb lua vim.api.nvim_win_set_option(0, "foldcolumn", "0")
   augroup end
 
-  augroup _dart
-    autocmd!
-    autocmd BufWritePre *.dart lua vim.lsp.buf.format()
-  augroup end
-
 	" Vimoutliner needs to be updated
   augroup _otl
     autocmd!

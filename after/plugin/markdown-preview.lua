@@ -1,8 +1,9 @@
 -- label the group
 local wk = require("which-key")
-wk.register({
-	["<leader>m"] = { name = "markdown" }
+wk.add({
+	"<leader>m", group = "markdown"
 })
+
 
 vim.keymap.set('n', '<leader>mp', function()
 		vim.cmd.MarkdownPreviewToggle()

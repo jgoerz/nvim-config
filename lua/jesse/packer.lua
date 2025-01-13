@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
 
 	-- https://github.com/nvim-treesitter/nvim-treesitter
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
@@ -110,16 +110,23 @@ return require('packer').startup(function(use)
 
 	-- Markdown Previewer
 	-- install without yarn or npm
-	use({
-			"iamcco/markdown-preview.nvim",
-			run = function() vim.fn["mkdp#util#install"]() end,
+	--[[ use({ ]]
+	--[[ 		"iamcco/markdown-preview.nvim", ]]
+	--[[ 		run = function() vim.fn["mkdp#util#install"]() end, ]]
+	--[[ }) ]]
+	use({ "iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+		ft = { "markdown" },
 	})
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 	-- for generating table of content links
 	use({ "mzlogin/vim-markdown-toc"})
 
 	use({"jamessan/vim-gnupg"})
+
+	-- https://github.com/nanotee/sqls.nvim
+	use 'nanotee/sqls.nvim'
 
 	-- Testing
 	--[[ use {"vim-test/vim-test"} ]]

@@ -1,6 +1,6 @@
 local wk = require("which-key")
-wk.register({
-	["<leader>e"] = { name = "explorer" }
+wk.add({
+	"<leader>e", group = "explorer"
 })
 
 vim.keymap.set('n', '<leader>ee', function()
