@@ -17,6 +17,7 @@ function DisableSyntaxTreesitter()
     set noundofile
     set noswapfile
     set noloadplugins
+		set mouse=
 endfunction
 ]]
 
@@ -71,7 +72,7 @@ vim.cmd [[
   augroup end
 
 	" Terraform
-	silent! autocmd! filetypedetect BufRead,BufNewFile *.tf
+	silent! autocmd! filetypedetect BufRead,BufNewFile *.tf setlocal commentstring=#\ %s
 	autocmd BufRead,BufNewFile *.hcl set filetype=hcl
 	autocmd BufRead,BufNewFile .terraformrc,terraform.rc set filetype=hcl
 	autocmd BufRead,BufNewFile *.tf,*.tfvars set filetype=terraform
@@ -85,3 +86,10 @@ vim.cmd [[
 	augroup END
 
 ]]
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "terraform",
+  callback = function()
+    vim.bo.commentstring = "# %s"
+  end
+})

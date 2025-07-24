@@ -33,6 +33,10 @@ require('nvim-tree').setup {
 	git = {
     enable = true,
     timeout = 800 -- (in ms)
-  }
+  },
+	filters = {
+   dotfiles = false,
+   custom = {"^\\.git$"},
+  },
 }
 
